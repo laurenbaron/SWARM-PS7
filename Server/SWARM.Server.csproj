@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\Base\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
 
@@ -33,5 +36,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\Base\" />
   </ItemGroup>
 </Project>
