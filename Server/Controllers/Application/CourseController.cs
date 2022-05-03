@@ -1,5 +1,4 @@
-﻿//using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using SWARM.EF.Data;
 using SWARM.EF.Models;
@@ -14,7 +13,6 @@ namespace SWARM.Server.Controllers.Application
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
     public class CourseController : BaseController<Course>, iBaseController<Course>
     {
         public CourseController(SWARMOracleContext context,
