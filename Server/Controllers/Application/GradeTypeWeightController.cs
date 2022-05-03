@@ -118,7 +118,7 @@ namespace SWARM.Server.Controllers.Application
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError, "Record exists, cannot insert");
                 }
-
+                exist_t = new GradeTypeWeight();
                 exist_t.SchoolId = t_dto.SchoolId;
                 exist_t.SectionId = t_dto.SectionId;
                 exist_t.GradeTypeCode = t_dto.GradeTypeCode;

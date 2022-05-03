@@ -104,6 +104,7 @@ namespace SWARM.Server.Controllers.Application
                     return StatusCode(StatusCodes.Status500InternalServerError, "Record exists, cannot insert");
                 }
 
+                exist_t = new Zipcode();
                 exist_t.Zip = t_dto.Zip;
                 exist_t.City = t_dto.City;
                 exist_t.State = t_dto.State;

@@ -79,7 +79,7 @@ namespace SWARM.Server.Controllers.Application
                 {
                     bExist = true;
                 }
-
+                exist_t = new Grade();
                 exist_t.SchoolId = t_dto.SchoolId;
                 exist_t.StudentId = t_dto.StudentId;
                 exist_t.SectionId = t_dto.SectionId;
@@ -119,6 +119,7 @@ namespace SWARM.Server.Controllers.Application
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError, "Record exists, cannot insert");
                 }
+                exist_t = new Grade();
                 exist_t.SchoolId = t_dto.SchoolId;
                 exist_t.StudentId = t_dto.StudentId;
                 exist_t.SectionId = t_dto.SectionId;

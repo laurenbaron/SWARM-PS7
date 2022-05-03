@@ -25,8 +25,9 @@ namespace SWARM.Server.Controllers.Application
         [Route("Get")]
         public async Task<IActionResult> Get()
         {
-            //made variable names more general so don't need to change for each class 
+            //made variable names more general so don't need to change for each class
             List<Course> lst_t = await _context.Courses.OrderBy(x => x.CourseNo).ToListAsync();
+            
             return Ok(lst_t);
         }
 
@@ -48,6 +49,7 @@ namespace SWARM.Server.Controllers.Application
             return Ok();
         }
 
+        //HttpPut: if it exists update, if it doesnt exist add it
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] Course t_dto)
         {
@@ -91,6 +93,7 @@ namespace SWARM.Server.Controllers.Application
             }
         }
 
+        //HttpPost: if it doesnt exist create a new one if it does exist it should fail. Adding it unless exist then reject it
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Course t_dto)
         {
